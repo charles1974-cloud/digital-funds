@@ -1,0 +1,402 @@
+/* =========================
+   1. GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080d19;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tagline {
+    color: #4388ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   2. HEADER AND NAVIGATION
+========================= */
+
+.header {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid #20283a;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo span,
+.hero-content h1 span,
+.design-icon span {
+    color: #4388ff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navbar a {
+    color: #c1c8d6;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #4388ff;
+}
+
+.header-btn,
+.primary-btn {
+    display: inline-block;
+    background: #4388ff;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.header-btn:hover,
+.primary-btn:hover {
+    background: #2566d9;
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 570px;
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 4vw, 55px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.hero-text {
+    color: #aab4c7;
+    font-size: 16px;
+    max-width: 480px;
+    margin: 22px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.secondary-btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border: 1px solid #39445b;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: border-color 0.3s;
+}
+
+.secondary-btn:hover {
+    border-color: #4388ff;
+}
+
+.hero-note {
+    color: #78849b;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+/* =========================
+   4. HERO DESIGN CARD
+========================= */
+
+.hero-card {
+    width: 100%;
+    padding: 32px;
+    background: linear-gradient(145deg, #18243b, #101726);
+    border: 1px solid #293750;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px #00000030;
+}
+
+.card-top {
+    color: #b5c1d5;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4388ff;
+    margin-right: 8px;
+}
+
+.design-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #22375b;
+    border: 1px solid #3b5b8c;
+    border-radius: 15px;
+    font-size: 27px;
+    font-weight: 900;
+    margin: 35px 0 25px;
+}
+
+.hero-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    color: #aab4c7;
+    font-size: 14px;
+}
+
+.card-line {
+    height: 1px;
+    background: #35435b;
+    margin: 25px 0 18px;
+}
+
+.card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #9eacc3;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   5. SERVICES SECTION
+========================= */
+
+.services {
+    padding: 80px 8%;
+    background: #0d1423;
+    text-align: center;
+}
+
+.services > h2,
+.about h2,
+.contact h2 {
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.services > p:not(.tagline),
+.about > p:not(.tagline),
+.contact > p:not(.tagline) {
+    color: #aab4c7;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.service-card {
+    background: #111c30;
+    border: 1px solid #27354d;
+    border-radius: 12px;
+    padding: 28px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #4388ff;
+}
+
+.service-number {
+    color: #4388ff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.service-card p {
+    color: #aab4c7;
+    font-size: 14px;
+}
+
+/* =========================
+   6. ABOUT SECTION
+========================= */
+
+.about {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.about > p:not(.tagline) {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* =========================
+   7. CONTACT SECTION
+========================= */
+
+.contact {
+    padding: 80px 8%;
+    background: #0d1423;
+    text-align: center;
+}
+
+.contact .primary-btn {
+    margin-top: 25px;
+}
+
+/* =========================
+   8. FOOTER
+========================= */
+
+.footer {
+    padding: 28px 8%;
+    border-top: 1px solid #20283a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer p {
+    color: #8895aa;
+    font-size: 13px;
+}
+
+/* =========================
+   9. TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero-card {
+        max-width: 550px;
+    }
+}
+
+/* =========================
+   10. MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+    .header {
+        padding: 20px 5%;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .header-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero,
+    .services,
+    .about,
+    .contact {
+        padding: 55px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-card {
+        padding: 25px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
